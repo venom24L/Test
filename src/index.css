@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=Space+Grotesk:wght@300;400;700&family=Playfair+Display:ital,wght@1,900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-dark: #070707;
+  --color-gold: #c5a059;
+  --color-accent-red: #8b0000;
+}
+
+:root {
+  background-color: var(--color-dark);
+  color: white;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-dark);
+}
+
+/* Grain Noise Overlay */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  filter: contrast(150%) brightness(100%);
+}
+
+.cinematic-vignette {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.9) 100%);
+  pointer-events: none;
+  z-index: 6;
+}
+
+.spotlight-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(197, 160, 89, 0.03) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+  color: transparent;
+  transition: -webkit-text-stroke 0.5s ease;
+}
+
+.watermark {
+  font-size: clamp(150px, 25vw, 350px);
+  line-height: 0.7;
+  letter-spacing: -0.08em;
+  opacity: 0.015;
+  pointer-events: none;
+  user-select: none;
+  filter: blur(2px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.weapon-shadow {
+  filter: drop-shadow(0 0 30px rgba(0,0,0,0.8));
+}
