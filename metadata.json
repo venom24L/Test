@@ -1,8 +1,0 @@
-{
-  "name": "StringTune | Master Your Skills",
-  "description": "A cinematic, ultra-minimalist scrolling experience featuring traditional Japanese weaponry with high-contrast typography and dramatic lighting effects.",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}
